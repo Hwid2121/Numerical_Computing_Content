@@ -39,15 +39,15 @@
 
 
 \setassignment
-\setduedate{Monday, 2024, 11:59 PM}
+\setduedate{17 January, 2024}
 
-\serieheader{Numerical Computing}{2023}{Student: Nicolo' Tafta}{Discussed with: Sofia d'Atri, Martin Lettry, Eduardo Trabattoni, Michele Dalle Rive}{Numerical Computing Final Exam}{}
+\serieheader{Numerical Computing}{2023}{Student: Nicolo' Tafta}{Discussed with: chatGPT}{Numerical Computing Final Exam}{}
 \newline
 
 % \assignmentpolicy
 
 \section{Project 1 - PageRank Algorithm and Social Networks}
-The first project questions plus some content from the slides.
+The initial project queries, along with additional information from the presentation slides, comprise this chapter. Notably, this section has less extensive documentation compared to others, primarily due to the limited details provided in the slides. For a more comprehensive grasp of this topic, it's advisable to consult both the slides and the relevant textbook. Contributions for enriching the content of this chapter are welcome, and interested individuals are encouraged to submit a pull request with their additions.
 
 \subsection{Understanding PageRank}
 The PageRank algorithm, a seminal creation of Google's co-founders Larry Page and Sergey Brin, fundamentally revolutionized web search technologies. It operates on a principle that evaluates the importance of web pages based solely on the network of links within the World Wide Web. When a specific query is made, Google employs the PageRank algorithm to sift through the vast web, identifying pages relevant to the query and ordering them based on their PageRank.
@@ -62,15 +62,36 @@ This model is mathematically conceptualized as a \textbf{Markov Chain} or \textb
 \subsubsection{Power Method}
 
 The Power Method is an iterative algorithm used to compute the dominant eigenvalue and corresponding eigenvector of a matrix. It is especially effective for large matrices where determining all eigenvalues is not feasible.
+\newline
+\textbf{The Power Iteration}: An approximation method for computing the eigenvectors of a matrix. It uses the following recursive formula to find the principal eigenvector $r$ of a matrix $M$:
+\[
+ r^{n+1}=\frac{M\cdot r^n}{||M\cdot r^n}
+\]
+In case of PR, $M$ is col-stochastic, and $r$ is a probability vector, therefore $||M \cdot r||=1$, and we reduce the power iteration to:
+\[
+ r^{n+1} = M \cdot r^n
+\]
 
-\textbf{Algorithm:}
+
+\textbf{Power Iteration method:}
 \begin{enumerate}
-    \item Initialize with a guess vector \( v^{(0)} \) (often random).
-    \item Iteratively update the vector:
-    \[ v^{(k+1)} = A v^{(k)} \]
-    \item Normalize \( v^{(k+1)} \) after each multiplication.
-    \item Check for convergence; the method converges when changes in \( v^{(k)} \) are below a predefined threshold.
+\item {\textbf{Input}: Graph $M$ with $n$ nodes and $m$ links.}
+\item{\textbf{Initalize}: $r_0=[1/n,...,1/n]^T$}
+\item{\textbf{While} $|r_k-r_{k-1}|_1 \geq \epsilon $ do:}
+\item{\quad $\tilde{r}=M\cdot r_{k-1}$}
+\item{\quad $r_k=\tilde{r}/||\tilde{r}||$}
+\item{\textbf{end while}}
 \end{enumerate}
+
+Flow equations in matrix form $r=M\cdot r$:
+\begin{itemize}
+ \item{$x$ is an eigenvector with corresponding eigenvalue $\lambda$ if: $Ax=\lambda x$}
+ \item{$r$ (the rank vector) is an eigenvector of the col. stochastic web adjacency matrix $M$}
+ \item {Starting from any stochastic $u$, the rank $r$ is the limit $M \cdot M \cdots Mu$}
+ \item{The associated Eigenvalue $\lambda=1$}
+ \item{We can efficiently solve for $r$.}
+\end{itemize}
+
 
 \textbf{Convergence:} The method converges to the eigenvector associated with the largest eigenvalue, assuming that the largest eigenvalue's magnitude is strictly greater than the second largest.
 
@@ -78,14 +99,33 @@ The Power Method is an iterative algorithm used to compute the dominant eigenval
 
 Inverse Iteration, often used with a shift (known as Shift and Invert), is a technique to find an eigenvalue and its corresponding eigenvector close to a given target \( \mu \).
 
-\textbf{Algorithm:}
+\begin{itemize}
+ \item {The power Iteration has cost $O(n^2)$ (matrix-vector product) per iteration.}
+ \item{Convergence can be very slow if for eigenvalues $\lambda_1 > \lambda_2 > ... \lambda_n$ of the matrix $A \in \mathbb{R}^{nxn}$we have $|\frac{\lambda_2}{\lambda_1}| ~ 1$}
+ \item{Shift and invert technique improves the convergence rate, but solves a linear systems at each iteration with $O(n^3)$ cost.}
+\end{itemize}
+
+\textbf{Algorithm Inverse Iteration:}
 \begin{enumerate}
-    \item Apply a shift to the matrix \( A \) to obtain \( B = A - \mu I \).
-    \item Instead of multiplying by \( A \), use the inverse of \( B \):
-    \[ v^{(k+1)} = B^{-1} v^{(k)} \]
-    \item Normalize \( v^{(k+1)} \) after each iteration.
-    \item Check for convergence.
+\item{ \textbf{Input:} Graph $A$, Intial guess $v_0$, shift $\alpha$}
+\item{\textbf{Initialize} $r_0 = [1/n,...,1/1n]^T$}
+\item {\textbf{for} k=1,2,..., until termination criteria $do$:}
+\item{\quad Solve ($A-\alpha I$)$\tilde{v} = v_{k-1}$}
+\item{\quad $v_k=\tilde{v}/||v||$}
+\item{\quad $\lambda^k = v^T_kAv_k$}
+\item {end for}
 \end{enumerate}
+Shift and inverse technique, main idea:
+\begin{itemize}
+\item{$\lambda_i$: eigs of $A$, then $\lambda_i-\alpha$: of $A \alpha I$, and $\mu_i=\frac{1}{\lambda_i-a}$: of $B=(A-\alpha I)^{-1}$}
+\item{If $\alpha ~= \lambda_1 \quad \Rightarrow \quad$ Rapid Convergence}
+\item{Popular choices for $\alpha =|A|_1$ or $\alpha = \lambda^{k-1}$}
+\item {If $\alpha$ is fixed, inversion of $B$ takes place outside the for loop.}
+ \item {If $v_0$ normalized, $\lambda^0=v_0^TAv+0$ and $\alpha=\lambda^{k-1}$, the Rayleight quotiient is approximated.}
+ \item{$\lambda(v)=\frac{v^TAv}{v^Tv}$}
+ \item{Cubic convergence justifies increased cost/iteration.}
+\end{itemize}
+
 
 \textbf{Usage:} This method is particularly useful when the largest eigenvalue is not of primary interest, or when the target is to find eigenvalues close to a specific value \( \mu \).
 
