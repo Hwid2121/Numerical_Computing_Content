@@ -55,7 +55,12 @@ The PageRank algorithm, a seminal creation of Google's co-founders Larry Page an
 The core idea of PageRank can be visualized as a random surfer model. In this model, navigation across the web is simulated by randomly following outbound links from one web page to another. This process, however, encounters challenges such as dead ends (web pages lacking outbound links) and loops within tightly knit clusters of web pages. To mitigate these issues, PageRank introduces a randomization factor: at certain intervals, the surfer is directed to a randomly chosen web page, breaking free from loops and dead ends.
 \newline
 This model is mathematically conceptualized as a \textbf{Markov Chain} or \textbf{Markov Process}, where the probability of transitioning from one page to another is determined by the structure of the web's link network. The essence of PageRank lies in its recursive nature: a page is deemed significant and thus assigned a high rank if it is linked by other pages that are themselves of high rank. This recursive evaluation of page importance forms the backbone of the PageRank algorithm.
-
+\newline \newline
+A matrix is called \textit{col-stochastic} if it satisfies two conditions:
+\begin{enumerate}
+ \item {\textbf{Non-negativity}: every element in the matrix is non-negative. This means all entries $a_{ij}$ of the matrix are greater than or equal to zero ($a_{ij} \geq 0)$}
+ \item{\textbf{Column Sum Equals One}: The sum of the elements in each column is equal to one.}
+\end{enumerate}
 
 \subsection{Numerical Methods for Eigenvalue Problems}
 
@@ -65,12 +70,13 @@ The Power Method is an iterative algorithm used to compute the dominant eigenval
 \newline
 \textbf{The Power Iteration}: An approximation method for computing the eigenvectors of a matrix. It uses the following recursive formula to find the principal eigenvector $r$ of a matrix $M$:
 \[
- r^{n+1}=\frac{M\cdot r^n}{||M\cdot r^n}
+ r^{n+1}=\frac{M\cdot r^n}{||M\cdot r^n||}
 \]
 In case of PR, $M$ is col-stochastic, and $r$ is a probability vector, therefore $||M \cdot r||=1$, and we reduce the power iteration to:
 \[
  r^{n+1} = M \cdot r^n
 \]
+
 
 
 \textbf{Power Iteration method:}
