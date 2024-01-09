@@ -68,6 +68,8 @@ A matrix is called \textit{col-stochastic} if it satisfies two conditions:
 
 The Power Method is an iterative algorithm used to compute the dominant eigenvalue and corresponding eigenvector of a matrix. It is especially effective for large matrices where determining all eigenvalues is not feasible.
 \newline
+Power Method is particularly used for estimating numerically largest or smallest Eigen Value and its corresponding Eigenvector.
+\newline
 \textbf{The Power Iteration}: An approximation method for computing the eigenvectors of a matrix. It uses the following recursive formula to find the principal eigenvector $r$ of a matrix $M$:
 \[
  r^{n+1}=\frac{M\cdot r^n}{||M\cdot r^n||}
@@ -76,9 +78,51 @@ In case of PR, $M$ is col-stochastic, and $r$ is a probability vector, therefore
 \[
  r^{n+1} = M \cdot r^n
 \]
+Example:
+\[
+ A = \begin{bmatrix}
+      1 & -3 & 2 \\
+      4 & 4 & -1 \\
+      6 & 3 &  5 \\
+     \end{bmatrix}
+     x_0 =
+     \begin{bmatrix}
+            1 \\ 1 \\ 1
+    \end{bmatrix}
+    \]
+    \[
+    \text{Iteration 1:}\quad
+    Ax_0 =
+    \begin{bmatrix}
+      1 & -3 & 2 \\
+      4 & 4 & -1 \\
+      6 & 3 &  5 \\
+     \end{bmatrix}
+     \begin{bmatrix}
+            1 \\ 1 \\ 1
+    \end{bmatrix}  =
+    \begin{bmatrix}
+     0 \\ 7 \\ 14
+    \end{bmatrix}
+\]
 
-
-
+Here the $14$ is the largest eigenvalue and its correspoding eigenvector. So on, continue with the iteration using the eigenvector where we take out $14$:
+\[
+\text{Iteration 2:}\quad
+Ax_1 = A \cdot
+\begin{bmatrix}
+ 0\\0.5\\1
+\end{bmatrix} =
+\begin{bmatrix}
+ 0.5\\1\\6.5
+\end{bmatrix}=
+6.5
+\begin{bmatrix}
+ 0.07 \\ 0.15 \\ 1
+\end{bmatrix}
+\]
+In this iteration the $6.5$ is the largest eigenvalue. And continue iteratively for $n$ iterations. It wil happen that same eigenvalues will repeat recursively.
+\newline
 \textbf{Power Iteration method:}
 \begin{enumerate}
 \item {\textbf{Input}: Graph $M$ with $n$ nodes and $m$ links.}
