@@ -121,7 +121,7 @@ Ax_1 = A \cdot
  0.07 \\ 0.15 \\ 1
 \end{bmatrix}
 \]
-In this iteration the $6.5$ is the largest eigenvalue. And continue iteratively for $n$ iterations. It wil happen that same eigenvalues will repeat recursively.
+In this iteration the $6.5$ is the largest eigenvalue. And continue iteratively for $n$ iterations. It wilL happen that same eigenvalues will repeat recursively and then happen when it converge.
 \newline
 \textbf{Power Iteration method:}
 \begin{enumerate}
@@ -154,6 +154,72 @@ Inverse Iteration, often used with a shift (known as Shift and Invert), is a tec
  \item{Convergence can be very slow if for eigenvalues $\lambda_1 > \lambda_2 > ... \lambda_n$ of the matrix $A \in \mathbb{R}^{nxn}$we have $|\frac{\lambda_2}{\lambda_1}| ~ 1$}
  \item{Shift and invert technique improves the convergence rate, but solves a linear systems at each iteration with $O(n^3)$ cost.}
 \end{itemize}
+Practical example:
+\[
+ A =
+ \begin{bmatrix}
+  0 & 1 \\
+  1 & 1
+ \end{bmatrix}\quad
+ b_1 =
+ \begin{bmatrix}
+  1 \\ 1
+ \end{bmatrix}\quad
+ \mu = -0.5
+\]
+
+\[
+ b_{k+1} = \frac{(A-\mu I)^{-1}bk}{||(A-\mu I)^{-1}bk||}
+\]
+\[
+ (A-\mu I)^{-1} =
+ \begin{bmatrix}
+  0.5 & 1 \\
+  1 & 1.5
+ \end{bmatrix}^{-1}
+ = \begin{bmatrix}\
+    -6 & 4 \\
+    4 & -2
+   \end{bmatrix}
+   \]
+\[
+   \begin{bmatrix}\
+    -6 & 4 \\
+    4 & -2
+   \end{bmatrix}
+   \begin{bmatrix}
+    1\\1
+   \end{bmatrix} = 2
+   \begin{bmatrix}
+    -1 \\ 1
+   \end{bmatrix}
+\]
+
+\[
+   \vdots \quad Several Iterations Later
+\]
+\[
+ b_8 = \begin{bmatrix}
+        -1.651180 \\
+        1
+       \end{bmatrix}
+       \quad
+       \lambda = \frac{b_8^TAb_8}{b_8^Tb_8} = 0.6180
+\]
+\newline
+\textbf{Rayleigh Quotient Iteration}\newline
+First do the \textit{Inverse Power Method} with $Shift$ + \textit{Rayleigh Quotient} at each step:
+\[
+ \text{Inverse Power Method}\quad  b_{k+1} = \frac{(A-\mu I)^{-1}bk}{||(A-\mu I)^{-1}bk||}
+\]
+\[
+ \text{Rayleigh Quotient} \quad \mu k = \frac{b^TkAb_k}{b^Tkbk} \quad \text{Each Step}
+\]
+Compute new $(A-\mu k I)^{-1}$ each iteration.
+\newline\newline
+
+
+
 
 \textbf{Algorithm Inverse Iteration:}
 \begin{enumerate}
