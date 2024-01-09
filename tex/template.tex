@@ -308,6 +308,27 @@ A simple example of a clique is a triangle in a network, where three nodes are a
 \subsection{Reverse Cuthill-McKee Ordering}
 
 The \textit{Reverse Cuthill-McKee Ordering} is an algorithm used in numerical linear algebra to reorder the rows and columns of a sparse matrix with the goal of reducing its bandwidth.
+\newline \newline
+The \textit{Reverse Cuthill-McKee(RCM)} algorithm is a graph reordering technique primarily used to reduce the bandwidth of a spare matrix. \newline
+The \textbf{Bandwidth} of a matrix is a measure of how far from the main diagonal the non-zero elements are located. Reducing the bandwidth is important in numerical analysis because it can make storage and computations more efficient, especially for sparse matrices. For example, if the furthest non-zero elment from the diagonal is three rows and columns away, the bandwidth is three.
+\newline\newline
+\textbf{How RCM works:}\newline
+RCM is a two-step process: First applying the \textit{Cuthill McKee(CM)} and then reversing the resulting order.
+\newline
+\begin{itemize}
+\item{\textit{Step 1: Cuthull-McKee Ordering}}
+ \item {\textbf{Degree Of Nodes}: The algorithm starts by computing the degree of each node (number of non-zero connections) in the graph.}
+ \item {\textbf{Starting Node}: Choose a node with the smallest degree as the starting node. If there are muktiple, any can be chosen. This choice can significantly affect the final result.}
+ \item{\textbf{Bredth-First Search(BFS)}: Perform a BFS starting from the chosen node. in BFS, you visit a node, then visit all its neighbours before moving to the next level of neighbours.}
+ \item{\textbf{Neighbor Ordering}: When visiting the neighbors of a node, order them by increasing degree. This step is crucial for reducing the bandwidth.}
+ \item{\textbf{Continue Until all Nodes are visited}}
+ \item{\textit{Step 2: Reverse the Order}: \newline Once the CM ordering is complete, simply reverse this order. This reversed order is the final RCM order.}
+\end{itemize}
+
+ A practical example:\newline
+ Consider a sparse matrix. Converting it to a graph, applying RCM, and then converting it back to a matrix form will often result in a Matrix where non-zero elements are clustered closer to the diagonal, reducing the bandwidth.
+
+
 
 \subsubsection{Bandwidth of a Matrix}
 The bandwidth of a matrix refers to the maximum distance of non-zero elements from the main diagonal. In matrices with low bandwidth, non-zero elements are concentrated close to the diagonal. Reducing the bandwidth of a matrix is often desirable for computational efficiency.
