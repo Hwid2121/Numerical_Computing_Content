@@ -169,7 +169,7 @@ Practical example:
 \]
 
 \[
- b_{k+1} = \frac{(A-\mu I)^{-1}bk}{||(A-\mu I)^{-1}bk||}
+ b_{k+1} = \frac{(A-\mu I)^{-1}b_k}{||(A-\mu I)^{-1}b_k||}
 \]
 \[
  (A-\mu I)^{-1} =
@@ -183,6 +183,7 @@ Practical example:
    \end{bmatrix}
    \]
 \[
+b_k =
    \begin{bmatrix}\
     -6 & 4 \\
     4 & -2
@@ -210,12 +211,13 @@ Practical example:
 \textbf{Rayleigh Quotient Iteration}\newline
 First do the \textit{Inverse Power Method} with $Shift$ + \textit{Rayleigh Quotient} at each step:
 \[
- \text{Inverse Power Method}\quad  b_{k+1} = \frac{(A-\mu I)^{-1}bk}{||(A-\mu I)^{-1}bk||}
+ \text{Inverse Power Method}\quad  b_{k+1} = \frac{(A-\mu I)^{-1}b_k}{||(A-\mu I)^{-1}b_k||}
 \]
 \[
- \text{Rayleigh Quotient} \quad \mu k = \frac{b^TkAb_k}{b^Tkbk} \quad \text{Each Step}
+ \text{Rayleigh Quotient} \quad \mu_k = \frac{b^T_kAb_k}{b^T_kb_k} \quad \text{Each Step}
 \]
-Compute new $(A-\mu k I)^{-1}$ each iteration.
+Compute new $(A-\mu_k I)^{-1}$ each iteration.
+\newline Helps to find the convergence quickly but more expensive.
 \newline\newline
 
 
