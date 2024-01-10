@@ -316,7 +316,7 @@ The \textbf{Bandwidth} of a matrix is a measure of how far from the main diagona
 RCM is a two-step process: First applying the \textit{Cuthill McKee(CM)} and then reversing the resulting order.
 \newline
 \begin{itemize}
-\item{\textit{Step 1: Cuthull-McKee Ordering}}
+\item{\textit{Step 1: Cuthill-McKee Ordering}}
  \item {\textbf{Degree Of Nodes}: The algorithm starts by computing the degree of each node (number of non-zero connections) in the graph.}
  \item {\textbf{Starting Node}: Choose a node with the smallest degree as the starting node. If there are muktiple, any can be chosen. This choice can significantly affect the final result.}
  \item{\textbf{Bredth-First Search(BFS)}: Perform a BFS starting from the chosen node. in BFS, you visit a node, then visit all its neighbours before moving to the next level of neighbours.}
@@ -722,7 +722,7 @@ The objective is to minimize:
 \begin{aligned}
  \sum_{i=1}^n d^2_i = \sum^n_{i=1}(x_i - x)^2 +(y_i -y)^2 -(u_1(x_i-x) + u_2(y_i-y))^2\\
  =  (\sum^n_{i=1}(x_i-x)^2)u^2_1+(\sum^n_{i=1}(y_i-y)^2)u^2_2+2(\sum^n_{i=1}(x_i-x)(y_i-y))u_1u_2\\
- = S_{xx}+ S_{yy} + S_{xy}
+ = S_{xx}+ S_{yy} `+ S_{xy}
  \end{aligned}
 \end{equation}
 
@@ -781,7 +781,7 @@ The approach can be extended to select a line \( L \) that is not necessarily or
 \textbf{Inertial Algorithm:}
 The algorithm involves assembling matrix \( M \), finding the eigenvector \( u_1 \), and computing line \( L \). Nodes are then partitioned along line \( H \), orthogonal to \( L \) and passing through the center of mass.
 
-\subsection{Spectral Partitioning}
+\subsection{Project 3 - Spectral Partitioning}
 
 Spectral Partitioning is a method in graph theory, based on the work of Fiedler in the 1970s and popularized by Horst Simon in 1995. It leverages the eigenvectors and eigenvalues (the \textit{spectrum}) of a graph's Laplacian matrix for partitioning.
 
@@ -792,7 +792,7 @@ The spectrum of a graph refers to its eigenvectors \( v_i \) and their correspon
 \end{equation}
 
 \textbf{Theory Behind Spectral Partitioning:}
-The spectral method employs linear algebra, particularly the spectral graph theorem, which enables the decomposition of a real symmetric matrix. Consider an undirected graph \( G(V, E) \) with vertices \( V = \{v_1, \ldots, v_n\} \) divided into two subsets \( V_1, V_2 \) such that \( V_1 \cup V_2 = V \) and \( V_1 \cap V_2 = \emptyset \). The indicator vector \[ x \in R^n \] is defined as:
+The spectral method employs linear algebra, particularly the spectral graph theorem, which enables the decomposition of a real symmetric matrix. Consider an undirected graph \( G(V, E) \) with vertices \( V = \{v_1, \ldots, v_n\} \) divided into two subsets \( V_1, V_2 \) such that \( V_1 \cup V_2 = V \) and \( V_1 \cap V_2 = \emptyset \). The indicator vector \[ x \in \mathbb{R}^n \] is defined as:
 \begin{equation}
     x_i =
         \begin{cases}
@@ -815,9 +815,9 @@ require: Graph G(V,E)
 Ensure: A bisection of G
 function SpectralBisection(graph G(V,E))
     Form the graph Laplacian matrix L.
-    Calculate the second smallest eigenvalue \lambda_2 and its associated eigenvector w_2.
-    Set 0 or the median of all components of w_2 as the threshold.
-    Choose V_1 := {v_i \in V | w_i < thres}, V2 := {v_i \in V | w_i >= thres}.
+    Calculate the second smallest eigenvalue $\lambda_2$ and its associated eigenvector $w_2$.
+    Set 0 or the median of all components of $w_2$ as the threshold.
+    Choose $V_1 := \{v_i \in V | w_i < thresold\}$, $V2 := \{v_i \in V | w_i >= threshold\}$.
     return V1, V2
 end function
 \end{lstlisting}
@@ -841,8 +841,8 @@ The comparison with recursive bisection to k-way partitioning result that is not
 \section{Spectral Graph Clustering}
 Clustering algorithms:
 \begin{itemize}
- \item{Flat Algorithms, that has no explicit structure that would relate clustes to each oither and usually start with a random partitioning (k-means or model based clustering) and it is a Spectral Clustering.}
- \item{Hierarchical algorithms, bottom-up and agglomerative or top-down and divisive.}
+ \item{\textbf{Flat Algorithms}, that has no explicit structure that would relate clusters to each other and usually start with a random partitioning (k-means or model based clustering) and it is a Spectral Clustering.}
+ \item{\textbf{Hierarchical algorithms}, bottom-up and agglomerative or top-down and divisive.}
 \end{itemize}
 
 \subsection{Hierarchical Clustering}
@@ -856,12 +856,12 @@ Start at the top with all data in one cluster. The cluster is split using a flat
 
 
 \subsection{Graph Theory}
-Information regarding the inner structure of a adta set in term of:
+Information regarding the inner structure of a data set in term of:
 \begin{itemize}
- \item {Cliques, subsets of connectedf nodes, each pair of elements is connected.}
- \item{Clusters, highly connected goupsn of nodes}
- \item{centrality, importnatn nodes, hubs}
- \item{Outlier, unimportant Nodes}
+ \item {\textbf{Cliques}, subsets of connected nodes, each pair of elements is connected.}
+ \item{\textbf{Clusters}, highly connected groups of nodes}
+ \item{\textbf{centrality}, important nodes, hubs}
+ \item{\textbf{Outlier}, unimportant Nodes}
 \end{itemize}
 
 \subsubsection{Graph Construction \& Graph Notation}
@@ -874,12 +874,12 @@ Indicator Vector: $x \in \mathbb{R}^n$
           0, \quad i \in \bar{A}
           \end{cases}
          \end{equation}
-Shorthanfd notation: $i \in A = {i|v_i \in A}$
+Shorthand notation: $i \in A = {i|v_i \in A}$
 \newline
 Weights:
 \begin{equation}
  w_{ij} = \begin{cases}
-           >0, \quad if v_i connected to v_j \\
+           >0, \quad if\quad v_i\quad   connected \quad to \quad v_j \\
            = 0 \quad otherwise
           \end{cases}
 \end{equation}
