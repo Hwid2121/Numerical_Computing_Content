@@ -226,7 +226,7 @@ Compute new $(A-\mu_k I)^{-1}$ each iteration.
 \textbf{Algorithm Inverse Iteration:}
 \begin{enumerate}
 \item{ \textbf{Input:} Graph $A$, Intial guess $v_0$, shift $\alpha$}
-\item{\textbf{Initialize} $r_0 = [1/n,...,1/1n]^T$}
+\item{\textbf{Initialize} $r_0 = [1/n,...,1/n]^T$}
 \item {\textbf{for} k=1,2,..., until termination criteria $do$:}
 \item{\quad Solve ($A-\alpha I$)$\tilde{v} = v_{k-1}$}
 \item{\quad $v_k=\tilde{v}/||v||$}
@@ -352,16 +352,16 @@ The \textit{Reverse Cuthill-McKee Ordering} is an extension where the order dete
 \end{itemize}
 
 \subsubsection{MATLAB Implementation}
-MATLAB implements this ordering through the \texttt{symrcm} function, which takes a sparse matrix and returns a permutation vector to rearrange the matrix, minimizing bandwidth.
+\textit{symrcm} implements in MATLAB the Reverse Cuthill-McKee alogirthm specifically for symmetric matrices. The function takes the adjacency matrix of a graph and returns a permutation vector that reorders the nodes of the graph.
 
 
 \subsection{Explanation of MATLAB Pagerank1 Function - POWER METHOD}
 
 \subsubsection{Function Definition}
 \begin{lstlisting}
-function x = pagerank1(U, G, p)
+function x = powerMethod(U, G, p)
 \end{lstlisting}
-- \textbf{Purpose}: Defines the function `pagerank1` to compute the PageRank of web pages.
+- \textbf{Purpose}: Defines the function `powermethod` to compute the PageRank of web pages.
 - \textbf{Inputs}:
   - `U`: A cell array of URLs.
   - `G`: An adjacency matrix representing web page links.
@@ -534,7 +534,7 @@ The second project questions plus some content from the slides.
 	\begin{itemize}
 	\item {Coordinate Bisection}
 	\item {Recursive Coordinate Bisection}
-	\item {Interital Partitioning}
+	\item {Inertial Partitioning}
 	\end{itemize}
 	\item{ Partitioning \textbf{without} Nodal coordinates}
 	\begin{itemize}
@@ -722,7 +722,7 @@ The objective is to minimize:
 \begin{aligned}
  \sum_{i=1}^n d^2_i = \sum^n_{i=1}(x_i - x)^2 +(y_i -y)^2 -(u_1(x_i-x) + u_2(y_i-y))^2\\
  =  (\sum^n_{i=1}(x_i-x)^2)u^2_1+(\sum^n_{i=1}(y_i-y)^2)u^2_2+2(\sum^n_{i=1}(x_i-x)(y_i-y))u_1u_2\\
- = S_{xx}+ S_{xy} + S_{xy}
+ = S_{xx}+ S_{yy} + S_{xy}
  \end{aligned}
 \end{equation}
 
