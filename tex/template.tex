@@ -1216,7 +1216,7 @@ For a given number \( k \) of subsets, our goal is to find a partition \( A_1, \
 \text{RatioCut}(A_1, \ldots, A_k) = \sum_{i=1}^{k} \frac{\text{cut}(A_1, \ldots, A_k)}{|A_i|} \quad \text{(Balanced)}
 \]
 
-The minimum of \(\sum_{i=1}^{k}(\frac{1}{|A_i|})\) coincides.
+The minimum of \(\sum_{i=1}^{k}(\frac{1}{|A_i|})\) is met if all $|A_i|$ coincide.
 
 \textbf{Example of RatioCut:}
 Let \( k = 2 \). Our goal is to solve the minimization problem:
@@ -1232,7 +1232,7 @@ x_i = \begin{cases}
 \]
 The RatioCut objective function can be rewritten using the graph Laplacian:
 \[
-x^T L x = x^T D x - x^T W x = \sum_{i=1}^{n} d_i x^2_i - \sum_{i,j=1}^{n} x_i x_j w_{ij} = \ldots = \text{Rcut}(A,\bar{A}) \cdot |V|
+x^T L x = x^T D x - x^T W x = \sum_{i=1}^{n} d_i x^2_i - \sum_{i,j=1}^{n} x_i x_j w_{ij} = \ldots =cut(A,\bar{A})\cdot (\frac{1}{|A|}+\frac{1}{|\bar{A}|})\cdot (|A|+|\bar{A}|) =  \text{Rcut}(A,\bar{A}) \cdot |V|
 \]
 Additionally, the vector \( x \) is orthogonal to the constant vector \( \mathbf{1} \):
 \[
@@ -1240,7 +1240,7 @@ x^T \mathbf{1} = \sum_{i=1}^{n} x_i = |A| \sqrt{\frac{|\bar{A}|}{|A|}} - |\bar{A
 \]
 And \( x \) measures the cardinality of the entire set:
 \[
-\|x\|^2 = x^T x = \sum_{i=1}^{n} x^2_i = |A| + |\bar{A}| = n = |V|
+\|x\|^2 = x^T x  \sum_{i=1}^{n} x^2_i = |A| + |\bar{A}| = n = |V|
 \]
 The minimization problem
 \[
