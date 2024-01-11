@@ -60,7 +60,7 @@ A matrix is called \textit{col-stochastic} if it satisfies two conditions:
 \begin{enumerate}
  \item {\textbf{Non-negativity}: every element in the matrix is non-negative. This means all entries $a_{ij}$ of the matrix are greater than or equal to zero ($a_{ij} \geq 0)$}
  \item{\textbf{Column Sum Equals One}: The sum of the elements in each column is equal to one.}
-\end{enumerate}
+\end{enuzmerate}
 \subsubsection{The PageRank formulations.}
 \subsubsection*{Matrix Notations}
 \begin{itemize}
@@ -1513,19 +1513,19 @@ The algorithm for an iterative method can be structured as follows:
 In iterative methods, two important concepts are \textit{Error} and \textit{Residual}, which help in measuring the accuracy of the solution at each iteration.
 
 \begin{itemize}
-    \item \textbf{Error:} The error at step \( m \) quantifies the deviation of the approximate solution \( x^(m) \) from the exact solution \( x \). It is defined as:
+    \item \textbf{Error:} The error at step \( m \) quantifies the deviation of the approximate solution \( x^{(m)} \) from the exact solution \( x \). It is defined as:
     \[
-    e^(m) = x - x^(m) = A^{-1}b - x^(m)
+    e^{(m)} = x - x^{(m)} = A^{-1}b - x^{(m)}
     \]
     Here, \( e^(m )\) represents the difference between the true solution and the current approximation.
 
     \item \textbf{Residual:} The residual is a measure of the real error and is relatively easier to compute compared to the error. It is defined as:
     \[
-    r^(m) = b - Ax^(m) = Ae^(m)
+    r^{(m)} = b - Ax^{(m)} = Ae^{(m)}
     \]
-    This expression shows that the residual \( r^(m) \) is equivalent to the error transformed by the matrix \( A \) (i.e., \( Ae^(m) \)). The significance of this relationship will be evident in subsequent discussions.
+    This expression shows that the residual \( r^{(m)} \) is equivalent to the error transformed by the matrix \( A \) (i.e., \( Ae^{(m)} \)). The significance of this relationship will be evident in subsequent discussions.
 
-    \item \textbf{Residual Norm:} The norm of the residual, denoted as \( ||r^(m)|| \), quantifies the magnitude of the residual. Additionally, the relative residual norm is defined as \( \frac{||r^(m)||}{||b||} \), which normalizes the residual norm by the norm of the constant vector \( b \) in the system \( Ax = b \).
+    \item \textbf{Residual Norm:} The norm of the residual, denoted as \( ||r^{(m)}|| \), quantifies the magnitude of the residual. Additionally, the relative residual norm is defined as \( \frac{||r^{(m)}||}{||b||} \), which normalizes the residual norm by the norm of the constant vector \( b \) in the system \( Ax = b \).
 \end{itemize}
 
 Understanding error and residual, and their respective norms, is crucial in assessing the convergence and accuracy of iterative methods in solving systems of linear equations.
