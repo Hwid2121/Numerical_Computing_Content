@@ -61,6 +61,32 @@ A matrix is called \textit{col-stochastic} if it satisfies two conditions:
  \item {\textbf{Non-negativity}: every element in the matrix is non-negative. This means all entries $a_{ij}$ of the matrix are greater than or equal to zero ($a_{ij} \geq 0)$}
  \item{\textbf{Column Sum Equals One}: The sum of the elements in each column is equal to one.}
 \end{enumerate}
+\subsubsection{The PageRank formulations.}
+\subsubsection*{Matrix Notations}
+\begin{itemize}
+    \item $M$: A column-stochastic matrix with nonnegative entries, where the sum of entries in each column is 1. It represents the link structure of a web.
+    \item $v$: A column-stochastic vector (teleportation vector) satisfying $e^T v = 1$. This represents a uniform probability distribution over all webpages.
+    \item $p$: The teleportation parameter ($0 < p < 1$), which balances the link-following (according to $M$) and random jumping (according to $v$).
+\end{itemize}
+
+\subsubsection*{Eigenvector Formulation}
+The PageRank vector $x$ is considered as the principal eigenvector of the modified link matrix. The formulation is given by:
+\begin{equation}
+    x = pMx + (1 - p)v
+\end{equation}
+This equation models a stochastic process where, at each step, with probability $p$, the next page is chosen based on the link structure ($M$), and with probability $1 - p$, a random page is chosen according to $v$.
+
+\subsection*{Linear System Formulation}
+The PageRank problem can also be formulated as a linear system:
+\begin{equation}
+    (I - pM)x = (1 - p)v
+\end{equation}
+Here, $I$ is the identity matrix. The solution to this linear system, $x$, yields the same PageRank vector as in the eigenvector formulation.
+
+Both formulations are equivalent under the condition that we seek a nonnegative eigenvector $x$ where the sum of its elements equals 1 (i.e., $e^Tx = 1$), making $x$ a stochastic vector. The PageRank vector $x$ represents the steady-state distribution of a random surfer's probability of being on each page, given the web's link structure and the teleportation mechanism.
+
+
+
 
 \subsection{Numerical Methods for Eigenvalue Problems}
 
