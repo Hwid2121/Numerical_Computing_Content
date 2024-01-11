@@ -958,10 +958,15 @@ The goal of constructing a connectivity matrix \( G \) is to model the local nei
 
 \begin{itemize}
     \item \textbf{Epsilon-Neighborhood Graph:} In this approach, a threshold value \( \varepsilon \) is identified. An edge is included between two nodes if the distance between them is smaller than or equal to \( \varepsilon \). This method emphasizes local connectivity based on proximity.
+    \newline
+    Better for small graphs where can do trial and error. Big Graphs $k~log(n)$.
 
-    \item \textbf{K-Nearest Neighbors (K-NN) Graph:} This method involves inserting edges between a node and its \( k \)-nearest neighbors. Here, each node is connected to at least \( k \) other nodes, ensuring that every node has a minimum degree of \( k \). The K-NN graph is particularly useful for capturing local structures in the data.
+    \item \textbf{K-Nearest Neighbors (K-NN) Graph:} This method involves inserting edges between a node and its \( k \)-nearest neighbors. Here, each node is connected to at least \( k \) other nodes, ensuring that every node has a minimum degree of \( k \). The K-NN graph is particularly useful for capturing local structures in the data.\newline
+    Choose $\epsilon$ such that the resulting graph is safely connected, i.e. the length of the longest edge in a minimal  spanning tree of the fully connected graph on the data points.
 
     \item \textbf{Fully Connected Graph:} In a fully connected graph, there is an edge between every pair of nodes, resulting in a complete graph. This approach models the most dense possible connectivity, assuming every data point is connected to every other point.
+    \newline
+    Chose $\phi$ in the order of the mean distance of a point to its k-th nearest neighbor, where $k~log(n)+1$ or chose $\phi = \epsilon$ but all of these are ad-hoc.
 \end{itemize}
 
 Each of these methods has its own applications and implications on the structure and properties of the graph. The choice of method depends on the specific requirements of the problem and the nature of the data.
@@ -981,7 +986,8 @@ The operation \( S \cdot G = W \) signifies an element-wise multiplication of ma
 \newline \newline
 \textbf{Resulting Sparse Matrix:}
 The resulting sparse matrix \( W \) represents a weighted adjacency matrix of the graph, where the weights are influenced both by the similarity of data points and the epsilon-connectivity criterion. This approach ensures that the graph structure is both locally relevant and reflective of the underlying data's similarity.
-
+\newline \newline
+\textbf{Issue}: If the similarity graph contains more connected componenets than the number of clusters we ask the algorithm to detect, the spectral clustering will trivially return connected components as clusters. Thus, the resulting graph should be connected, or at least have significantly fewer connected components than clusters we want to detect.
 
 \subsubsection{Spanning Trees and Minimum Spanning Trees}
 
@@ -1038,6 +1044,41 @@ A graph $G(V,E)$ is a structure that models a relation E over a set of V entitie
 \textbf{Recursive Bi-partition:}
 \begin{itemize}
     \item \textit{Method:} The method involves recursively applying a bi-partitioning algorithm in a hierarchical, divisive manner to the data set. This process continues until the desired number of clusters (\( k \)) is achieved.
+    \newline
+    \begin{itemize}
+     \item {\textbf{Initial Setup}:
+     \begin{itemize}
+      \item You have a graph $G$ that you want to parition into $k$ clusters.
+      \item The graph is represented by its Laplacian matrix L.
+     \end{itemize}
+     }
+     \item{\textbf{Recursive Bi-Partitioning Process}:
+     \begin{itemize}
+      \item {\textbf{Start with the entire graph}: Initally, the entire graph $G$ is considered as a single cluster.}
+      \item{\textbf{Spectral Bisection}: Apply spectral bisection to the graph. This involves calculating the second smallest eigenvalue (the Fiedler value) of the Laplacian matrix and its correspoding eigenvector. The graph is then split into two parts based on the sign of the compoents of the Fiedler vector.}
+      \item{\textbf{Recursive Division}: Each of the two resulting subgraphs is then treated as a separate graph and subjected to the same spectral bisection process.}
+      \item{\textbf{Continuation}: This process of bi-partitionign is recursively applied to each subgraph till you have $k$-clusters}.
+     \end{itemize}}
+     \item{\textbf{Termination of Recursion}:
+     \begin{itemize}
+      \item The recursion stops when the desidered number of clusters $k$ is reached. If $k$ is a power of 2, the process is straightforward as each round of bisection doubles the number of clusters.
+      \item If $k$ is not a power of 2, some clusters will be split further than others. The decision of which clusters to split further can be based on various criteria, such as the size of the clusters, the modularity or other domain-specific metrics.
+     \end{itemize}
+     }
+     \item{\textbf{Outcome}:
+     \begin{itemize}
+      \item The result is a partition of the original graph into $k$ clusters, where each cluster is expected to represent a community or a cohesive group within the graph.
+     \end{itemize}
+     }
+     \item {\textbf{Characteristics of Recursive Bi-partitioning}:
+     \begin{itemize}
+      \item {\textbf{Hierarchical Structure}: This method creates a hierarchical decomposition of the graph.}
+      \item{\textbf{Quality of Clusters}: The quality of the clusters depends on the ability of the Fiedler vector to capture the underlying community structure in each recursive step.}
+      \item{\textbf{Efficiency}: Recursive bi-partitioning can be more efficient than direct k-way partitioning, especially for large graphs.}
+     \end{itemize}
+     }
+    \end{itemize}
+
 
     \item \textit{Advantages:} The main advantage of this approach is its simplicity in terms of the algorithmic concept, making it easy to implement and understand.
 
@@ -1046,7 +1087,44 @@ A graph $G(V,E)$ is a structure that models a relation E over a set of V entitie
 
 \textbf{Clustering Multiple Eigenvectors:}
 \begin{itemize}
-    \item \textit{Method:} This approach involves constructing a reduced space from the first \( k \) eigenvectors of the graph Laplacian. The data points are then clustered in this reduced eigenvector space.
+    \item \textit{Method:} This approach involves constructing a reduced space from the first \( k \) eigenvectors of the graph Laplacian. The data points are then clustered in this reduced eigenvector space. This approach extends beyond using just the Fiedler vector. Instead, it utilizes multiple eigenvectors to achieve a more nuanced and potentially more accurate clustering.
+    \newline
+    \begin{itemize}
+     \item {\textbf{Initial Setup}:
+     \begin{itemize}
+      \item You have a graph $G$ represented by its Laplacian matrix $L$.
+      \item Your goal is to partition this graph into $k$ clusters.
+     \end{itemize}}
+     \item{\textbf{Eigenvalue Decomposition}:
+     \begin{itemize}
+      \item Compute the first $k$ smallest eigenvalues and their corresponding eigenvectors of the Laplacian matrix $L$.
+      \item These eigenvectors are used because they contain information about the structure of the graph that is relevant to clustering.
+     \end{itemize}}
+     \item{\textbf{Constructing the Feature Matrix}:
+     \begin{itemize}
+      \item Form a new matrix $U\in \mathbb{R}^{n\times k}$ whose columns are the $k$ eigenvectors.
+      \item Each row of $U$ now represents a node in the graph, but in a new $k-$Dimensional eigenspace. This step essentially maps each node to a point in a lower-dimensional space.
+     \end{itemize}
+}
+\item{\textbf{Clustering in the Eigenspace}:
+\begin{itemize}
+ \item Apply a standard clustering algorithm (like k-means) to the rows of $U$.
+ \item This clusters the nodes of the original graph based on their representations in the eigenspace.
+\end{itemize}
+}
+\item {\textbf{Interpreting the clusters}:
+\begin{itemize}
+ \item Each node is assigned to a cluster based on which cluster its corresponding row in $U$ was assigned to inthe k-means process.
+ \item The result is a partition of the original graph into $k$ clusters.
+\end{itemize}
+}
+\item {\textbf{Characteristics and Advantages}
+\begin{itemize}
+ \item {\textbf{Use of Higher-Order Information}: By using multiple eigenvectors, this method incorporates more global information about the graph.}
+ \item {\textbf{Improved Clustering Quality}: It often results in better clustering, especially for complex graphs with intricate community structures.}
+\end{itemize}
+}
+    \end{itemize}
 
     \item \textit{Advantages:} Clustering multiple eigenvectors makes full use of the information provided by these eigenvectors. It generally has less computational complexity compared to other methods, and the clustering results are often quite satisfactory.
 
@@ -1062,17 +1140,17 @@ In summary, k-way spectral clustering offers different approaches, each with its
 
 \textbf{Procedure:}
 \begin{enumerate}
-    \item \textit{Construct a Similarity Graph:} Form a similarity graph based on the matrix \( S \). Let \( W \) be its weighted adjacency matrix.
+    \item \textbf{Construct a Similarity Graph:}\newline Form a similarity graph based on the matrix \( S \). Let \( W \) be its weighted adjacency matrix.
 
-    \item \textit{Compute the Unnormalized Laplacian:} Calculate the unnormalized Laplacian matrix \( L \) using \( L = D - W \), where \( D \) is the degree matrix of the graph.
+    \item \textbf{Compute the Unnormalized Laplacian:}\newline Calculate the unnormalized Laplacian matrix \( L \) using \( L = D - W \), where \( D \) is the degree matrix of the graph.
 
-    \item \textit{Eigenvector Computation:} Compute the first \( k \) eigenvectors \( u_1, \ldots, u_k \) of the Laplacian matrix \( L \).
+    \item \textbf{Eigenvector Computation:}\newline Compute the first \( k \) eigenvectors \( u_1, \ldots, u_k \) of the Laplacian matrix \( L \).
 
-    \item \textit{Form Matrix \( U \):} Construct matrix \( U \in \mathbb{R}^{n \times k} \) which contains the vectors \( u_1, \ldots, u_k \) as columns. This step represents a dimensionality reduction from \( n \times n \) to \( n \times k \).
+    \item \textbf{Form Matrix \( U \):}\newline Construct matrix \( U \in \mathbb{R}^{n \times k} \) which contains the vectors \( u_1, \ldots, u_k \) as columns. This step represents a dimensionality reduction from \( n \times n \) to \( n \times k \).
 
-    \item \textit{Row Vector Formation:} For each \( i = 1, \ldots, n \), define \( y_i \in \mathbb{R}^k \) as the vector corresponding to the \( i \)-th row of \( U \).
+    \item \textbf{Row Vector Formation:}\newline For each \( i = 1, \ldots, n \), define \( y_i \in \mathbb{R}^k \) as the vector corresponding to the \( i \)-th row of \( U \).
 
-    \item \textit{Clustering:} Apply the k-means algorithm to cluster the points \( (y_i)_{i=1, \ldots, n} \) in \( \mathbb{R}^k \) into \( k \) clusters \( C_1, \ldots, C_k \).
+    \item \textbf{Clustering:}\newline Apply the k-means algorithm to cluster the points \( (y_i)_{i=1, \ldots, n} \) in \( \mathbb{R}^k \) into \( k \) clusters \( C_1, \ldots, C_k \).
 \end{enumerate}
 
 \textbf{Outcome:}

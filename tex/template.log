@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.11.8)  11 JAN 2024 10:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.11.8)  11 JAN 2024 11:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -638,644 +638,662 @@ Underfull \hbox (badness 10000) in paragraph at lines 952--954
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 967--970
-
- []
-
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 971--984
+Underfull \hbox (badness 10000) in paragraph at lines 972--975
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 971--984
+Underfull \hbox (badness 10000) in paragraph at lines 976--991
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 971--984
+Underfull \hbox (badness 10000) in paragraph at lines 976--991
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 971--984
+Underfull \hbox (badness 10000) in paragraph at lines 976--991
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 976--991
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 976--991
 
  []
 
 [18]
-<img1.png, id=390, 696.6025pt x 632.3625pt>
+<img1.png, id=389, 696.6025pt x 632.3625pt>
 File: img1.png Graphic file (type png)
 <use img1.png>
-Package pdftex.def Info: img1.png  used on input line 1024.
+Package pdftex.def Info: img1.png  used on input line 1030.
 (pdftex.def)             Requested size: 284.52756pt x 258.2861pt.
-<img2.png, id=392, 696.6025pt x 632.3625pt>
+<img2.png, id=391, 696.6025pt x 632.3625pt>
 File: img2.png Graphic file (type png)
 <use img2.png>
-Package pdftex.def Info: img2.png  used on input line 1031.
+Package pdftex.def Info: img2.png  used on input line 1037.
 (pdftex.def)             Requested size: 284.52756pt x 258.2861pt.
  [19pdfTeX warning (ext4): destination with the same identifier (name{figure.1}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1035 
-        <./img1.png>] [20pdfTeX warning (ext4): destination with the same ident
-ifier (name{figure.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1066 
-        <./img2.png>]
-<img3.png, id=428, 1115.16624pt x 474.77374pt>
-File: img3.png Graphic file (type png)
-<use img3.png>
-Package pdftex.def Info: img3.png  used on input line 1101.
-(pdftex.def)             Requested size: 284.52756pt x 121.13452pt.
- [21pdfTeX warning (ext4): destination with the same identifier (name{figure.3}
-) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1108 
-        <./img3.png>]
-<img4.png, id=447, 1226.5825pt x 581.17125pt>
-File: img4.png Graphic file (type png)
-<use img4.png>
-Package pdftex.def Info: img4.png  used on input line 1111.
-(pdftex.def)             Requested size: 284.52756pt x 134.81053pt.
-File: img3.png Graphic file (type png)
-<use img3.png>
-Package pdftex.def Info: img3.png  used on input line 1121.
-(pdftex.def)             Requested size: 284.52756pt x 121.13452pt.
- [22pdfTeX warning (ext4): destination with the same identifier (name{figure.4}
-) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1154 \]
-         pdfTeX warning (ext4): destination with the same identifier (name{figu
-re.5}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1154 \]
-          <./img4.png>] [23] [24] [25] [26] [27]
-Underfull \hbox (badness 10000) in paragraph at lines 1458--1459
+l.1041 
+        <./img1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1046--1048
 
  []
 
-[28]
-Underfull \hbox (badness 10000) in paragraph at lines 1497--1503
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1517--1522
-
- []
-
-[29]
-Underfull \hbox (badness 10000) in paragraph at lines 1526--1528
-
- []
-
-<img6.png, id=634, 1250.6725pt x 813.0375pt>
-File: img6.png Graphic file (type png)
-<use img6.png>
-Package pdftex.def Info: img6.png  used on input line 1547.
-(pdftex.def)             Requested size: 284.52756pt x 152.59615pt.
-[30pdfTeX warning (ext4): destination with the same identifier (name{figure.6})
+[20pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1564 \end{align*}
+l.1070       \item T
+                    he result is a partition of the original graph into $k$ ...
+ <./img2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1090--1092
+
+ []
+
+[21] [22]
+<img3.png, id=446, 1115.16624pt x 474.77374pt>
+File: img3.png Graphic file (type png)
+<use img3.png>
+Package pdftex.def Info: img3.png  used on input line 1179.
+(pdftex.def)             Requested size: 284.52756pt x 121.13452pt.
+<img4.png, id=448, 1226.5825pt x 581.17125pt>
+File: img4.png Graphic file (type png)
+<use img4.png>
+Package pdftex.def Info: img4.png  used on input line 1189.
+(pdftex.def)             Requested size: 284.52756pt x 134.81053pt.
+File: img3.png Graphic file (type png)
+<use img3.png>
+Package pdftex.def Info: img3.png  used on input line 1199.
+(pdftex.def)             Requested size: 284.52756pt x 121.13452pt.
+ [23pdfTeX warning (ext4): destination with the same identifier (name{figure.3}
+) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1207 \subsection
+                  {Balanced Graph Partitioning Analogy}pdfTeX warning (ext4): d
+estination with the same identifier (name{figure.4}) has been already used, dup
+licate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1207 \subsection
+                  {Balanced Graph Partitioning Analogy}pdfTeX warning (ext4): d
+estination with the same identifier (name{figure.5}) has been already used, dup
+licate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1207 \subsection
+                  {Balanced Graph Partitioning Analogy} <./img3.png> <./img4.pn
+g>] [24] [25] [26] [27] [28] [29]
+Underfull \hbox (badness 10000) in paragraph at lines 1536--1537
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1575--1581
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1595--1600
+
+ []
+
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 1604--1606
+
+ []
+
+<img6.png, id=638, 1250.6725pt x 813.0375pt>
+File: img6.png Graphic file (type png)
+<use img6.png>
+Package pdftex.def Info: img6.png  used on input line 1625.
+(pdftex.def)             Requested size: 284.52756pt x 152.59615pt.
+[31pdfTeX warning (ext4): destination with the same identifier (name{figure.6})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1642 \end{align*}
                     <./img6.png>]
-<img7.png, id=646, 1552.80125pt x 587.19376pt>
+<img7.png, id=651, 1552.80125pt x 587.19376pt>
 File: img7.png Graphic file (type png)
 <use img7.png>
-Package pdftex.def Info: img7.png  used on input line 1570.
+Package pdftex.def Info: img7.png  used on input line 1648.
 (pdftex.def)             Requested size: 426.79134pt x 161.3847pt.
-<img8.png, id=648, 531.9875pt x 483.8075pt>
+<img8.png, id=653, 531.9875pt x 483.8075pt>
 File: img8.png Graphic file (type png)
 <use img8.png>
-Package pdftex.def Info: img8.png  used on input line 1601.
+Package pdftex.def Info: img8.png  used on input line 1679.
 (pdftex.def)             Requested size: 284.52756pt x 258.76433pt.
- [31pdfTeX warning (ext4): destination with the same identifier (name{figure.7}
+ [32pdfTeX warning (ext4): destination with the same identifier (name{figure.7}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1605 
+l.1683 
         <./img7.png>]
-<img9.png, id=660, 1489.565pt x 816.04875pt>
+<img9.png, id=664, 1489.565pt x 816.04875pt>
 File: img9.png Graphic file (type png)
 <use img9.png>
-Package pdftex.def Info: img9.png  used on input line 1638.
+Package pdftex.def Info: img9.png  used on input line 1716.
 (pdftex.def)             Requested size: 426.79134pt x 233.80905pt.
- [32pdfTeX warning (ext4): destination with the same identifier (name{figure.8}
+ [33pdfTeX warning (ext4): destination with the same identifier (name{figure.8}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1642 
-        <./img8.png>] [33pdfTeX warning (ext4): destination with the same ident
+l.1720 
+        <./img8.png>] [34pdfTeX warning (ext4): destination with the same ident
 ifier (name{figure.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1683     \item \textbf
+l.1761     \item \textbf
                         {Iteration:} For \( m = 0, 1, \ldots, n-1 \): <./img9.p
-ng>] [34]
-<img10.png, id=687, 1176.395pt x 482.80376pt>
+ng>] [35]
+<img10.png, id=691, 1176.395pt x 482.80376pt>
 File: img10.png Graphic file (type png)
 <use img10.png>
-Package pdftex.def Info: img10.png  used on input line 1854.
+Package pdftex.def Info: img10.png  used on input line 1932.
 (pdftex.def)             Requested size: 426.79134pt x 175.15738pt.
- [35] [36pdfTeX warning (ext4): destination with the same identifier (name{figu
+ [36] [37pdfTeX warning (ext4): destination with the same identifier (name{figu
 re.10}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1925 ...te the following system of equations: \[
+l.2003 ...te the following system of equations: \[
                                                    <./img10.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1927--1931
+Underfull \hbox (badness 10000) in paragraph at lines 2005--2009
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1947--1960
+Underfull \hbox (badness 10000) in paragraph at lines 2025--2038
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1947--1960
+Underfull \hbox (badness 10000) in paragraph at lines 2025--2038
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1947--1960
+Underfull \hbox (badness 10000) in paragraph at lines 2025--2038
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1947--1960
-
- []
-
-[37]
-Underfull \hbox (badness 10000) in paragraph at lines 1963--1981
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1963--1981
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1963--1981
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1963--1981
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1999--2009
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1999--2009
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1999--2009
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1999--2009
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1999--2009
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1999--2009
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1999--2009
+Underfull \hbox (badness 10000) in paragraph at lines 2025--2038
 
  []
 
 [38]
-Underfull \hbox (badness 10000) in paragraph at lines 2041--2047
+Underfull \hbox (badness 10000) in paragraph at lines 2041--2059
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2041--2047
+Underfull \hbox (badness 10000) in paragraph at lines 2041--2059
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2041--2047
+Underfull \hbox (badness 10000) in paragraph at lines 2041--2059
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2041--2047
+Underfull \hbox (badness 10000) in paragraph at lines 2041--2059
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2077--2087
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2077--2087
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2077--2087
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2077--2087
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2077--2087
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2077--2087
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2077--2087
 
  []
 
 [39]
-Underfull \hbox (badness 10000) in paragraph at lines 2049--2054
+Underfull \hbox (badness 10000) in paragraph at lines 2119--2125
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2049--2054
+Underfull \hbox (badness 10000) in paragraph at lines 2119--2125
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2056--2064
+Underfull \hbox (badness 10000) in paragraph at lines 2119--2125
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2056--2064
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2056--2064
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2056--2064
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2066--2074
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2066--2074
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2066--2074
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2066--2074
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2066--2074
+Underfull \hbox (badness 10000) in paragraph at lines 2119--2125
 
  []
 
 [40]
-Underfull \hbox (badness 10000) in paragraph at lines 2076--2086
+Underfull \hbox (badness 10000) in paragraph at lines 2127--2132
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2076--2086
+Underfull \hbox (badness 10000) in paragraph at lines 2127--2132
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2076--2086
+Underfull \hbox (badness 10000) in paragraph at lines 2134--2142
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2076--2086
+Underfull \hbox (badness 10000) in paragraph at lines 2134--2142
 
  []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2088.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2089--2090
+Underfull \hbox (badness 10000) in paragraph at lines 2134--2142
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2095--2102
+Underfull \hbox (badness 10000) in paragraph at lines 2134--2142
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2144--2152
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2144--2152
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2144--2152
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2144--2152
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2144--2152
 
  []
 
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 2106--2111
+Underfull \hbox (badness 10000) in paragraph at lines 2154--2164
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2106--2111
+Underfull \hbox (badness 10000) in paragraph at lines 2154--2164
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2106--2111
+Underfull \hbox (badness 10000) in paragraph at lines 2154--2164
 
  []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2112.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2135--2139
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2135--2139
+Underfull \hbox (badness 10000) in paragraph at lines 2154--2164
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2139.
+(hyperref)                removing `math shift' on input line 2166.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2139.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2140--2154
+Underfull \hbox (badness 10000) in paragraph at lines 2167--2168
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2140--2154
+Underfull \hbox (badness 10000) in paragraph at lines 2173--2180
 
  []
 
 [42]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2155.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2155.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2155.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2155.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2156--2169
+Underfull \hbox (badness 10000) in paragraph at lines 2184--2189
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2156--2169
+Underfull \hbox (badness 10000) in paragraph at lines 2184--2189
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2156--2169
+Underfull \hbox (badness 10000) in paragraph at lines 2184--2189
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2170.
+(hyperref)                removing `math shift' on input line 2190.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2170.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2186.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2186.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2186.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2186.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2186.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\begingroup' on input line 2186.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\endgroup' on input line 2186.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@over' on input line 2186.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 2186.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 2186.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2186.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2186.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2186.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2186.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2186.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2187--2206
+Underfull \hbox (badness 10000) in paragraph at lines 2213--2217
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2187--2206
+Underfull \hbox (badness 10000) in paragraph at lines 2213--2217
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2187--2206
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2217.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2217.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2218--2232
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2187--2206
+Underfull \hbox (badness 10000) in paragraph at lines 2218--2232
 
  []
 
-[43] [44]
-<img11.png, id=801, 524.96124pt x 529.98pt>
+[43]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2233.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2233.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2233.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2233.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2234--2247
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2234--2247
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2234--2247
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2248.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2248.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2264.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2264.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2264.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2264.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2264.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 2264.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\endgroup' on input line 2264.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@over' on input line 2264.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 2264.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 2264.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2264.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2264.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2264.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2264.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2264.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2265--2284
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2265--2284
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2265--2284
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2265--2284
+
+ []
+
+[44] [45]
+<img11.png, id=805, 524.96124pt x 529.98pt>
 File: img11.png Graphic file (type png)
 <use img11.png>
-Package pdftex.def Info: img11.png  used on input line 2266.
+Package pdftex.def Info: img11.png  used on input line 2344.
 (pdftex.def)             Requested size: 199.16928pt x 201.071pt.
- [45pdfTeX warning (ext4): destination with the same identifier (name{figure.11
+ [46pdfTeX warning (ext4): destination with the same identifier (name{figure.11
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2313 \]
+l.2391 \]
           <./img11.png>]
-<img12.png, id=812, 585.18625pt x 533.995pt>
+<img12.png, id=816, 585.18625pt x 533.995pt>
 File: img12.png Graphic file (type png)
 <use img12.png>
-Package pdftex.def Info: img12.png  used on input line 2370.
+Package pdftex.def Info: img12.png  used on input line 2448.
 (pdftex.def)             Requested size: 199.16928pt x 181.7433pt.
- [46]
-<img13.png, id=823, 585.18625pt x 533.995pt>
+ [47]
+<img13.png, id=827, 585.18625pt x 533.995pt>
 File: img13.png Graphic file (type png)
 <use img13.png>
-Package pdftex.def Info: img13.png  used on input line 2411.
+Package pdftex.def Info: img13.png  used on input line 2489.
 (pdftex.def)             Requested size: 199.16928pt x 181.7433pt.
- [47pdfTeX warning (ext4): destination with the same identifier (name{figure.12
+ [48pdfTeX warning (ext4): destination with the same identifier (name{figure.12
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2415 
+l.2493 
         <./img12.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 2427--2439
+Underfull \hbox (badness 10000) in paragraph at lines 2505--2517
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2427--2439
+Underfull \hbox (badness 10000) in paragraph at lines 2505--2517
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2427--2439
+Underfull \hbox (badness 10000) in paragraph at lines 2505--2517
 
  []
 
-[48pdfTeX warning (ext4): destination with the same identifier (name{figure.13}
+[49pdfTeX warning (ext4): destination with the same identifier (name{figure.13}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2440 \[
-          <./img13.png>] [49] [50] [51] [52]
-Underfull \hbox (badness 10000) in paragraph at lines 3122--3123
+l.2518 \[
+          <./img13.png>] [50] [51] [52] [53]
+Underfull \hbox (badness 10000) in paragraph at lines 3200--3201
 
  []
 
-[53]
-<geogebra-export.png, id=877, 1062.79411pt x 736.51633pt>
+[54]
+<geogebra-export.png, id=881, 1062.79411pt x 736.51633pt>
 File: geogebra-export.png Graphic file (type png)
 <use geogebra-export.png>
-Package pdftex.def Info: geogebra-export.png  used on input line 3137.
+Package pdftex.def Info: geogebra-export.png  used on input line 3215.
 (pdftex.def)             Requested size: 469.47046pt x 238.32379pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3154--3155
+Underfull \hbox (badness 10000) in paragraph at lines 3232--3233
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3161--3165
+Underfull \hbox (badness 10000) in paragraph at lines 3239--3243
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3171--3175
+Underfull \hbox (badness 10000) in paragraph at lines 3249--3253
 
  []
 
-[54pdfTeX warning (ext4): destination with the same identifier (name{figure.14}
+[55pdfTeX warning (ext4): destination with the same identifier (name{figure.14}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.3175 \begin{equation*}
+l.3253 \begin{equation*}
                          <./geogebra-export.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 3181--3183
+Underfull \hbox (badness 10000) in paragraph at lines 3259--3261
 
  []
 
-<geogebra-export2.png, id=888, 15486.42857pt x 10128.12428pt>
+<geogebra-export2.png, id=893, 15486.42857pt x 10128.12428pt>
 File: geogebra-export2.png Graphic file (type png)
 <use geogebra-export2.png>
-Package pdftex.def Info: geogebra-export2.png  used on input line 3221.
+Package pdftex.def Info: geogebra-export2.png  used on input line 3299.
 (pdftex.def)             Requested size: 469.47046pt x 302.10004pt.
-[55]
-Underfull \hbox (badness 10000) in paragraph at lines 3225--3226
+[56]
+Underfull \hbox (badness 10000) in paragraph at lines 3303--3304
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3232--3234
+Underfull \hbox (badness 10000) in paragraph at lines 3310--3312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3235--3236
+Underfull \hbox (badness 10000) in paragraph at lines 3313--3314
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3242--3246
+Underfull \hbox (badness 10000) in paragraph at lines 3320--3324
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3251--3255
+Underfull \hbox (badness 10000) in paragraph at lines 3329--3333
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3260--3264
+Underfull \hbox (badness 10000) in paragraph at lines 3338--3342
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3260--3264
+Underfull \hbox (badness 10000) in paragraph at lines 3338--3342
 
  []
 
-[56pdfTeX warning (ext4): destination with the same identifier (name{figure.15}
+[57pdfTeX warning (ext4): destination with the same identifier (name{figure.15}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.3267 \begin{lstlisting}
-                          <./geogebra-export2.png>] [57] [58] [59] [60]
-[61] [62] [63] (./template.aux)
+l.3345 \begin{lstlisting}
+                          <./geogebra-export2.png>] [58] [59] [60] [61]
+[62] [63] [64] (./template.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1283,10 +1301,10 @@ Package rerunfilecheck Info: File `template.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 16658 strings out of 480171
- 273755 string characters out of 5894489
+ 16660 strings out of 480171
+ 273786 string characters out of 5894489
  963051 words of memory out of 5000000
- 33498 multiletter control sequences out of 15000+600000
+ 33499 multiletter control sequences out of 15000+600000
  481073 words of font info for 72 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  108i,10n,106p,10603b,1904s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1311,10 +1329,10 @@ dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/symbols/msbm10.pfb>
-Output written on template.pdf (63 pages, 2796598 bytes).
+Output written on template.pdf (64 pages, 2800992 bytes).
 PDF statistics:
- 1834 PDF objects out of 2073 (max. 8388607)
- 1663 compressed objects within 17 object streams
- 914 named destinations out of 1000 (max. 500000)
+ 1839 PDF objects out of 2073 (max. 8388607)
+ 1666 compressed objects within 17 object streams
+ 915 named destinations out of 1000 (max. 500000)
  1062 words of extra memory for PDF output out of 10000 (max. 10000000)
 
