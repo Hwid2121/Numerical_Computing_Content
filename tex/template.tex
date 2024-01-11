@@ -781,7 +781,7 @@ The approach can be extended to select a line \( L \) that is not necessarily or
 \textbf{Inertial Algorithm:}
 The algorithm involves assembling matrix \( M \), finding the eigenvector \( u_1 \), and computing line \( L \). Nodes are then partitioned along line \( H \), orthogonal to \( L \) and passing through the center of mass.
 
-\subsection{Project 3 - Spectral Partitioning}
+\subsection{Project 3 -     Spectral Partitioning}
 
 Spectral Partitioning is a method in graph theory, based on the work of Fiedler in the 1970s and popularized by Horst Simon in 1995. It leverages the eigenvectors and eigenvalues (the \textit{spectrum}) of a graph's Laplacian matrix for partitioning.
 
@@ -846,7 +846,7 @@ Clustering algorithms:
 \end{itemize}
 
 \subsection{Hierarchical Clustering}
-Hierarchical clustering is more informative than the unstructured set of flat clusters and easier to deide on the number of clusters by looking at the dendogram.\newline
+Hierarchical clustering is more informative than the unstructured set of flat clusters and easier to devide on the number of clusters by looking at the dendogram.\newline
 But is it is impossibile to undo the previous step, once the instaces have been assigned to a cluster the can no longer be moved around. Its complexity is $O(n^2)$ not suitable for very large datasets. The order of the data has impact on the final results.
 \subsubsection{Agglomerative Clustering}
 Agglomerate to collect or gather into a cluster or mass. Treat each data entry as a singleton cluster and then successively merge pairs of clusters till all clusters have been merged into a single one. Usually visualized with a dendogram. Does not require a prespecified number of clusters.
@@ -940,6 +940,7 @@ The graph Laplacian matrix \( L \) exhibits several important properties which a
     x^T L x = \frac{1}{2} \sum_{i,j=1}^{n} w_{ij} (x_i - x_j)^2,
     \]
     where \( w_{ij} \) is the weight of the edge between vertices \( i \) and \( j \), and \( x_i \), \( x_j \) are the components of the vector \( x \).
+    \newline This expression can be interpreted as a measure of the "smoothless" of the vector $x$ over the graph. If $x$ vaires greatly between adjacent nodes (i.e. $x_i$ and $x_j$ are significantly different for an edge ${i,j}$, the value of $x^TLx$ will be large.
 
     \item \textbf{Symmetry and Positive Semi-Definiteness:} The Laplacian matrix \( L \) is symmetric and positive semi-definite. This implies that all eigenvalues of \( L \) are non-negative and real.
 
@@ -964,20 +965,20 @@ The goal of constructing a connectivity matrix \( G \) is to model the local nei
 \end{itemize}
 
 Each of these methods has its own applications and implications on the structure and properties of the graph. The choice of method depends on the specific requirements of the problem and the nature of the data.
-
+\newline \newline
 \textbf{Graph Construction - Similarity Matrix \( S \)}
 
 The construction of a graph involves defining a similarity function on the dataset to ensure that the local neighborhoods, as delineated by this function, are meaningful. For instance, in the context of text documents, it's important to verify that documents with a high similarity score indeed belong to the same category or have similar content.
-
+\newline \newline
 \textbf{Similarity in Euclidean Space:}
-A common scenario involves data points situated in Euclidean space. Here, the similarity between points can be quantified using various functions, such as the Gaussian similarity function.
-
+A common scenario involves data points situated in Euclidean space. Here, the similarity between points can be quantified using various functions, such as the Gaussian similarity function \quad $s(x_i, x_j) = e ^{\frac{-||x_i-x_j||^2}{2 \phi^2}}$
+\newline \newline
 \textbf{Combining Similarity and Connectivity:}
 The full similarity matrix \( S \) is constructed using the chosen similarity function. Concurrently, an epsilon-connectivity graph represented by matrix \( G \) is established, which captures the local neighborhood structure based on a threshold \( \varepsilon \).
-
+\newline \newline
 \textbf{Element-wise Multiplication:}
 The operation \( S \cdot G = W \) signifies an element-wise multiplication of matrices \( S \) and \( G \), resulting in a sparse matrix \( W \). This matrix \( W \) retains elements only in positions where both \( S \) and \( G \) have significant entries, effectively filtering the similarity matrix with the graph's connectivity structure.
-
+\newline \newline
 \textbf{Resulting Sparse Matrix:}
 The resulting sparse matrix \( W \) represents a weighted adjacency matrix of the graph, where the weights are influenced both by the similarity of data points and the epsilon-connectivity criterion. This approach ensures that the graph structure is both locally relevant and reflective of the underlying data's similarity.
 
